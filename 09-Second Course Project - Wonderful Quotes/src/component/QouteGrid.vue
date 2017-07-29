@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="row">
-    <app-qoute v-for="qoute in qoutes">{{ qoute }}</app-qoute>
+    <app-qoute v-for="(qoute, idx) in qoutes"
+              @click.native="deleteQoute(idx)" >{{ qoute }}</app-qoute>
   </div>
 </template>
 
@@ -12,7 +13,14 @@ export default {
 
   components: {
     appQoute : Qoute,
-  }
+  },
+
+  methods : {
+    deleteQoute:function(idx){
+      console.log("deleteQoute " + "QouteGrid");
+      this.$emit('deleteQoute', idx);
+    }
+  },
 
 }
 </script>
