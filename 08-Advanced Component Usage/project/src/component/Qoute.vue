@@ -2,7 +2,7 @@
   <div class="">
     <div class="title">
       <slot name="qouteTitle"></slot>
-      <span><slot name="subTitle">this is subTitle</slot></span>
+      <span><slot>this is subTitle</slot></span>
     </div>
     <hr>
     <div class="qouteContent">
