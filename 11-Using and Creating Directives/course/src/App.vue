@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
           <h1>Custom Directive</h1>
-          <p v-highlight="'lightgrey'">custom directive</p>
+          <p v-local-highlight:bg="'red'">custom directive</p>
         </div>
       </div>
     </div>
@@ -23,7 +23,20 @@
 <script>
 export default {
   name: 'app',
+  directives : {
+    'local-highlight': {
+      bind(el, binding, vnode){
+        //el.style.backgroundColor = 'green';
+        //el.style.backgroundColor = binding.value;
+        if (binding.arg == 'bg'){
+          el.style.backgroundColor = binding.value;
+        } else {
+          el.style.color = binding.value;
+        }
+      },
+    },
 
+  }
 }
 </script>
 
