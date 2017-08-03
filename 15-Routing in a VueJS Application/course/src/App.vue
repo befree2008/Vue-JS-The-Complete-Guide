@@ -6,7 +6,12 @@
       <hr>
       <app-header></app-header>
       <router-view></router-view>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+
     </div>
+    <div>
+
   </div>
   </div>
 
